@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Camp</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="mathcamp_files/ioslides-13.5.1/fonts/fonts.css">
+
+  <link rel="stylesheet" media="all" href="mathcamp_files/ioslides-13.5.1/theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="mathcamp_files/ioslides-13.5.1/theme/css/phone.css">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Math Camp',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                        favIcon: 'mathcamp_files/logo.gif',
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Yue Hu' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.2s;
+      -moz-transition: opacity 0.6s ease-in 0.2s;
+      -o-transition: opacity 0.6s ease-in 0.2s;
+      transition: opacity 0.6s ease-in 0.2s;
+      opacity: 0;
+    }
+
+    slides > slide:not(.nobackground):before {
+      font-size: 12pt;
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      background: url(mathcamp_files/logo.gif) no-repeat 0 50%;
+      -webkit-background-size: 30px 30px;
+      -moz-background-size: 30px 30px;
+      -o-background-size: 30px 30px;
+      background-size: 30px 30px;
+      padding-left: 40px;
+      height: 30px;
+      line-height: 1.9;
+    }
+  </style>
+
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+        <aside class="gdbar"><img src="mathcamp_files/logo.gif"></aside>
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+          </hgroup>
+  </slide>
+
+<slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Preface</h2></hgroup><article  id="preface">
+
+</article></slide><slide class=''><hgroup><h2>Who Am I?</h2></hgroup><article  id="who-am-i">
+
+<table class = 'rmdtable'>
+<col width="33%" />
+<col width="66%" />
+<tr class="odd">
+<td align="left"><img src='http://static.wixstatic.com/media/7b27d0_35e2d926a9764c57aecf9f056f98543a.jpg_srz_268_396_85_22_0.50_1.20_0.00_jpg_srz' title=''/></td>
+<td align="left">I am a Ph.D. candidate in Department of Political Science of the University of Iowa. My researches lie in comparative politics, methodology, and international relations. Specifically, I am interested in language effects on public opinion and trends of public opinion in China. As a methodologist, I specifically focus on the applications and developments of survey experiment, spatial analysis, network analysis, and text analysis. See more details in my <a href='http://sammo3182.wixsite.com/huyue#!home/mainPage' title=''>webpage</a>.</td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>What Shall We Do?</h2></hgroup><article  id="what-shall-we-do">
+
+<ul class = 'build'>
+<li>Linear algebra (10:00 - 12:00)
+
+<ul class = 'build'>
+<li>Moore &amp; Siegel 2013, Ch 12.</li>
+</ul></li>
+<li>Calculus:　Differential (13:30 - 15:30)
+
+<ul class = 'build'>
+<li>Moore &amp; Siegel 2013, Ch 5, 6.</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Linear Algebra</h2></hgroup><article  id="linear-algebra">
+
+</article></slide><slide class=''><hgroup><h2>Why should we care?</h2></hgroup><article  id="why-should-we-care">
+
+<ul class = 'build'>
+<li>As a methodologist,
+
+<ul class = 'build'>
+<li>Reading the method papers.</li>
+<li>Spatial analyses, game theory, dynamic model, etc.</li>
+</ul></li>
+<li>As an empiricist,
+
+<ul class = 'build'>
+<li>Learning R.</li>
+</ul></li>
+<li>As a lazy guy,
+
+<ul class = 'build'>
+<li>\(y = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_nX_n + \varepsilon\)</li>
+<li>\(\boldsymbol{Y} = \boldsymbol{X\beta}\)</li>
+<li>And imagine if you have more than one \(y\).</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Concept</h2></hgroup><article  id="concept">
+
+<ul class = 'build'>
+<li>Scalar
+
+<ul class = 'build'>
+<li><img src='http://stream1.gifsoup.com/view4/1173689/wanted-goodbye-bullet-o.gif' title=''/></li>
+<li>Single element of a set.</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Vector
+
+<ul class = 'build'>
+<li><img src='https://media.giphy.com/media/Pih4M62eJrxEk/giphy.gif' title=''/></li>
+<li>Force in physics</li>
+<li>Dimension</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Matrix
+
+<ul class = 'build'>
+<li><img src='http://static2.comicvine.com/uploads/scale_super/14/142946/3873349-neo+bullet+dodge.gif' title='fig:'/></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Vector Algorithm</h2></hgroup><article  id="vector-algorithm">
+
+<ul class = 'build'>
+<li><p>Length</p>
+
+<p>\[||\boldsymbol{x}|| = \sqrt{\sum x_i^2}. \]</p></li>
+<li>What&#39;s this in the real life?
+
+<ul class = 'build'>
+<li>right triangle.</li>
+</ul></li>
+<li><p>Example</p>
+
+<p>If \(\boldsymbol{x} = (2, 4, 4, 1)\), its length \(||\boldsymbol{x}|| = \sqrt{2^2 + 4^2 + 4^2 + 1^2} = \sqrt{37}\).</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li><p>Addition</p>
+
+<p>\[\boldsymbol{a} \pm \boldsymbol{b} = (a_1 \pm b_1, a_2 \pm b_2, ..., a_n \pm b_n).\]</p></li>
+<li>What&#39;s this in the real life?
+
+<ul class = 'build'>
+<li><img src='https://media.giphy.com/media/FMenXZtWtfS1i/giphy.gif' title='fig:'/></li>
+</ul></li>
+<li><p>Example: \((1,2) + (5,8) = (1 + 5, 2 + 8) = (6, 10).\)</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Scalar Multiplication
+
+<ul class = 'build'>
+<li>\[c\boldsymbol{x} = (cx_1, cx_2,..., cx_n). \]</li>
+</ul></li>
+<li>What&#39;s this in the real life?
+
+<ul class = 'build'>
+<li><img src=http://imgmgr.banggood.com/images/upload/2014/08/SKU160100.gif height="200"/></li>
+</ul></li>
+<li>Example: Let \(\boldsymbol{x} = (2, 4), 2\boldsymbol{x} = (4,8).\)</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Vector normalization
+
+<ul class = 'build'>
+<li>\[\frac{\boldsymbol{x}}{||\boldsymbol{x}||}\]</li>
+</ul></li>
+<li>Vector Multiplication
+
+<ul class = 'build'>
+<li>Dot product: \[\boldsymbol{a\cdot b} = \sum a_ib_i = |\boldsymbol{a}||\boldsymbol{b}|cos\theta. \]</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Matrix in Types</h2></hgroup><article  id="matrix-in-types">
+
+<ul class = 'build'>
+<li><strong>Column vector</strong>: a matrix with only one column</li>
+<li><strong>Row vector</strong>: a matrix with only one row</li>
+<li><strong>Scalar</strong>: a matrix with only one element</li>
+<li><strong>Square matrix</strong>: \(A_{2\times2} = \left(\begin{array}{cc}  1 &amp; 2\\  3 &amp; 4  \end{array}\right)\)</li>
+<li><strong>Zero matrix</strong>: \(\left(\begin{array}{cc}  0 &amp; 0 &amp; 0\\  0 &amp; 0 &amp; 0  \end{array}\right)\)</li>
+<li><strong>Diagonal matrix</strong>: \(\left(\begin{array}{cc}  1 &amp; 0 &amp; 0\\  0 &amp; 2 &amp; 0\\  0 &amp; 0 &amp; 3  \end{array}\right)\)</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li><p><strong>Identity matrix </strong>: \(I = \left(\begin{array}{cc}  1 &amp; 0 &amp; 0\\  0 &amp; 1 &amp; 0\\  0 &amp; 0 &amp; 1  \end{array}\right)\)</p></li>
+<li><p><strong>Permutation matrix </strong>: \(\left(\begin{array}{cc}  0 &amp; 1 &amp; 0\\  1 &amp; 0 &amp; 0\\  0 &amp; 0 &amp; 1  \end{array}\right)\)</p></li>
+<li><p><strong>Upper/lower matrix</strong>: \(\left(\begin{array}{cc}  1 &amp; 4 &amp; 5\\  0 &amp; 2 &amp; 6\\  0 &amp; 0 &amp; 3  \end{array}\right)\)</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Matrix Transposition</h2></hgroup><article  id="matrix-transposition" class="column-2">
+
+<p>Row to column, \(A^t\).</p>
+
+<ul class = 'build'>
+<li>How the changes perform?
+
+<ul class = 'build'>
+<li><table class = 'rmdtable'>
+<tr class="header">
+<th align="center">Symmetric</th>
+<th align="center">Asymmetric</th>
+</tr>
+<tr class="odd">
+<td align="center"><img src='http://math-01.cs.umanitoba.ca/math1220/images/300px-Matrix-transpose.gif' title=''/></td>
+<td align="center"><img src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Matrix_transpose.gif' title=''/></td>
+</tr>
+</table></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Matrix Addition</h2></hgroup><article  id="matrix-addition">
+
+<ul class = 'build'>
+<li>\(A \pm B = a_{ij} \pm b_{ij}\)</li>
+<li>Example
+
+<ul class = 'build'>
+<li>\(A = \left(\begin{array}{cc}  1 &amp; 2\\  3 &amp; 4  \end{array}\right)\)</li>
+<li>\(B = \left(\begin{array}{cc}  5 &amp; 6\\  7 &amp; 8  \end{array}\right)\)<br/></li>
+<li>\(A + B = \left(\begin{array}{cc}  6 &amp; 8\\  10 &amp; 12  \end{array}\right)\)</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Matrix Multiplication</h2></hgroup><article  id="matrix-multiplication">
+
+<ul class = 'build'>
+<li>Scalar Multiplication: \(cA = ca_{ij}.\)</li>
+<li>Matrix Multiplication: \(C_{n\times p} = A_{n\times m}B_{m\times p} = \sum_{k = i}^{m}a_{ik}b_{kj}.\)
+
+<ul class = 'build'>
+<li>How does it work
+
+<ul class = 'build'>
+<li><img src='https://www.chilimath.com/algebra/advanced/matops/images2/ex1_mul_step2ani.gif' title=''/></li>
+</ul></li>
+<li>Left-multyplying B by A means \(BA\); right-multiplying B by A means \(AB\).</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Kronecker Product: \(A_{m\times n}B_{p\times q} = C_{mp\times nq}.\)
+
+<ul class = 'build'>
+<li><img src='http://www.sharetechnote.com/image/EngMath_TensorProduct_01.png' title='fig:'/></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Determinant</h2></hgroup><article  id="determinant">
+
+<ul class = 'build'>
+<li>Used to convert the matrix into scalar.</li>
+<li>\(2\times 2\) matrix
+
+<ul class = 'build'>
+<li><img src='https://www.chilimath.com/algebra/advanced/det/image/animated%20image%20determinant%20of%202x2%20matrix.gif' title=''/></li>
+</ul></li>
+<li>Laplace expansion: using minors.</li>
+<li>Butterfly method:
+
+<ul class = 'build'>
+<li><img src='https://www.facstaff.bucknell.edu/mastascu/eLessonsHTML/Circuit/Determinant1.gif' title=''/></li>
+</ul></li>
+<li>Mattices with non-zero determinant are <strong>non-singular matrices</strong>, which means invertible.</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Inverse</h2></hgroup><article  id="inverse">
+
+<ul class = 'build'>
+<li>If \(AB = BA = I\), then B is the inverse of A, i.e., \(B = A^{-1}\). Therefore, \[A\cdot A^{-1} = I.\]</li>
+<li>Calculate the inverse
+
+<ul class = 'build'>
+<li>Cofactor Matrix: \(A_{ij} = (-1)^{i + j}M_{ij}\), where \(M\) is the minor of \(a_{ij}\).</li>
+<li>Adjoint matrix: the matrix of cofactor matrices.</li>
+<li>\(A^{-1} = \frac{1}{|A|}adj(A)\)</li>
+<li>Example: Moore &amp; Siegel 2013, pp.295-6.</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Properties</h2></hgroup><article  id="properties">
+
+<ul class = 'build'>
+<li>Matrix
+
+<ul class = 'build'>
+<li>Associative: \((AB)C = A(BC)\).</li>
+<li>Additive distributive: \((A + B)C = AB + BC\).</li>
+<li>Scalar commutative: \(xAB = (xA)B = A(xB) = ABx\)</li>
+</ul></li>
+<li>Transpose
+
+<ul class = 'build'>
+<li>Inverse: \((A^T)^T = A\).</li>
+<li>Additive: \((A + B)^T = A^T + B^T\).</li>
+<li>Multiplicative: \((AB)^T = B^TA^T\).</li>
+<li>Scalar multiplication: \((cA)^T = cA^T\).</li>
+<li>Inverse transpose: \((A^{-1})^T = (A^T)^{-1}\).</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Determinant
+
+<ul class = 'build'>
+<li>Transpose: \(det(A) = det(A^T)\).</li>
+<li>Identity: \(det(I) = 1\).</li>
+<li>Multiplicative: \(det(AB) = det(A)det(B)\).</li>
+<li>Inverse: \(det(A^{-1}) = \frac{1}{det(A)}\).</li>
+<li>Scalar multiplicative: \(det(cA_{n\times n}) = c^ndet(A)\).</li>
+</ul></li>
+<li>Inverse
+
+<ul class = 'build'>
+<li>Inverse: \((A^{-1})^{-1} = A\).</li>
+<li>Multiplicative: \((AB)^{-1} = B^{-1}A^{-1}\).</li>
+<li>Scalar multiplicative: \((cA)^{-1} = c^{-1}A^{-1}, \mbox{if}\ c\neq 0\).</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Exercise I</h2></hgroup><article  id="exercise-i">
+
+<pre class = 'prettyprint lang-r'>library(dplyr)
+a &lt;- matrix(c(10, 2, 5, 2), ncol = 1)
+b &lt;- matrix(c(4, 15, 6, 8), ncol = 1)
+c &lt;- matrix(c(2, 6, 8), nrow = 1)
+d &lt;- matrix(c(1, 15, 12), nrow = 1)
+e &lt;- matrix(c(14, 17, 17, 11, 10), nrow = 1)
+f &lt;- matrix(c(20, 4, 10, 4), nrow = 1) %&gt;% t</pre>
+
+<pre class = 'prettyprint lang-r'>a + b
+a + c
+b - e
+15 * c
+-3 * f
+norm(b, type = &quot;F&quot;)
+norm(c + d, type = &quot;F&quot;)
+norm(c - d, type = &quot;F&quot;)
+a %*% b
+c %*% d</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<p>Answers</p>
+
+<pre class = 'prettyprint lang-r'>a + b</pre>
+
+<pre >##      [,1]
+## [1,]   14
+## [2,]   17
+## [3,]   11
+## [4,]   10</pre>
+
+<pre class = 'prettyprint lang-r'>#a + c
+#b - e
+15 * c</pre>
+
+<pre >##      [,1] [,2] [,3]
+## [1,]   30   90  120</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<pre class = 'prettyprint lang-r'>-3 * f</pre>
+
+<pre >##      [,1]
+## [1,]  -60
+## [2,]  -12
+## [3,]  -30
+## [4,]  -12</pre>
+
+<pre class = 'prettyprint lang-r'>norm(b, type = &quot;F&quot;)</pre>
+
+<pre >## [1] 18.46619</pre>
+
+<pre class = 'prettyprint lang-r'>norm(c + d, type = &quot;F&quot;)</pre>
+
+<pre >## [1] 29.15476</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<pre class = 'prettyprint lang-r'>norm(c - d, type = &quot;F&quot;)</pre>
+
+<pre >## [1] 9.899495</pre>
+
+<pre class = 'prettyprint lang-r'>#a %*% b
+#c %*% d</pre>
+
+</article></slide><slide class=''><hgroup><h2>Exercise II</h2></hgroup><article  id="exercise-ii">
+
+<pre class = 'prettyprint lang-r'>A &lt;- matrix(c(5, 1, 2, 6, 2, 3), nrow = 2)
+B &lt;- matrix(c(3, 4, 5, -2, -3, 6), nrow = 2)
+C &lt;- matrix(c(1, 2, -5, 3, -3, 1), ncol = 2)
+D &lt;- matrix(c(2, 1, 4, 3), nrow = 2)</pre>
+
+<pre class = 'prettyprint lang-r'>2 * B - 5 * A
+t(B) - C
+B %*% C
+C %*% B</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<p>Answers:</p>
+
+<pre class = 'prettyprint lang-r'>2 * B - 5 * A</pre>
+
+<pre >##      [,1] [,2] [,3]
+## [1,]  -19    0  -16
+## [2,]    3  -34   -3</pre>
+
+<pre class = 'prettyprint lang-r'>t(B) - C</pre>
+
+<pre >##      [,1] [,2]
+## [1,]    2    1
+## [2,]    3    1
+## [3,]    2    5</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<pre class = 'prettyprint lang-r'>B %*% C</pre>
+
+<pre >##      [,1] [,2]
+## [1,]   28   -9
+## [2,]  -30   24</pre>
+
+<pre class = 'prettyprint lang-r'>C %*% B</pre>
+
+<pre >##      [,1] [,2] [,3]
+## [1,]   15   -1   15
+## [2,]   -6   16  -24
+## [3,]  -11  -27   21</pre>
+
+</article></slide><slide class=''><hgroup><h2>Exercise III</h2></hgroup><article  id="exercise-iii">
+
+<pre class = 'prettyprint lang-r'>A &lt;- matrix(c(2, 1, -2, 2), ncol = 2)
+B &lt;- matrix(c(3, 2, -4, -1, -5, 1, 3, 2, 3), ncol = 3)</pre>
+
+<pre class = 'prettyprint lang-r'>det(A)
+det(B)</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<p>Answers:</p>
+
+<pre class = 'prettyprint lang-r'>det(A)</pre>
+
+<pre >## [1] 6</pre>
+
+<pre class = 'prettyprint lang-r'>det(B)</pre>
+
+<pre >## [1] -91</pre>
+
+</article></slide><slide class=''><hgroup><h2>Exercise IV</h2></hgroup><article  id="exercise-iv">
+
+<pre class = 'prettyprint lang-r'>A &lt;- matrix(c(4, 2, 6, 3), ncol = 2)
+B &lt;- matrix(c(1, 4, 3, 2), ncol = 2)</pre>
+
+<pre class = 'prettyprint lang-r'>solve(A)
+solve(B)</pre>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<p>Answers</p>
+
+<pre class = 'prettyprint lang-r'># solve(A)
+solve(B)</pre>
+
+<pre >##      [,1] [,2]
+## [1,] -0.2  0.3
+## [2,]  0.4 -0.1</pre>
+
+<pre class = 'prettyprint lang-r'>1/det(B) * matrix(c(2, -3, -4, 1), nrow = 2)</pre>
+
+<pre >##      [,1] [,2]
+## [1,] -0.2  0.4
+## [2,]  0.3 -0.1</pre>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Differentiation</h2></hgroup><article  id="differentiation">
+
+</article></slide><slide class=''><hgroup><h2>Derivative</h2></hgroup><article  id="derivative">
+
+<ul class = 'build'>
+<li>Mathematic definition
+
+<ul class = 'build'>
+<li><img src='http://i.stack.imgur.com/GfBT4.png' title='fig:'/></li>
+</ul></li>
+<li>what&#39;s this in the geomatrics?
+
+<ul class = 'build'>
+<li><img src='http://www.maplesoft.com/view.aspx?SI=1577/L6-equationOfTangentLine2.gif' title='fig:'/></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>What&#39;s this in the real life?
+
+<ul class = 'build'>
+<li><img src='http://24.media.tumblr.com/tumblr_m9ymieRVAv1rxqugfo1_500.gif' title='fig:'/></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Rules</h2></hgroup><article  id="rules">
+
+<ul class = 'build'>
+<li>\((C)&#39; = 0\).</li>
+<li>\((x^{\mu})&#39; = \mu x^{\mu - 1}\).</li>
+<li>\((a^x)&#39; = a^xln\ a\).</li>
+<li>\((log_ax)&#39; = \frac{1}{xln\ a}\).</li>
+<li>Let u, v are derivable,
+
+<ul class = 'build'>
+<li>\((u\pm v)&#39; = u&#39; + v&#39;\).</li>
+<li>\((Cu)&#39; = Cu&#39;\), where \(C\) is constant.</li>
+<li>\((uv)&#39; = u&#39;v + uv&#39;\).</li>
+<li>\((\frac{u}{v})&#39; = \frac{u&#39;v - uv&#39;}{v^2},\) where \(v\neq 0.\)</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<ul class = 'build'>
+<li>Chain rule: \(g(f(x))&#39; = g&#39;(f(x))f&#39;(x)\)
+
+<ul class = 'build'>
+<li>To solve \(g(f(x))&#39;\), let \(u = f(x)\).</li>
+<li>\(g(f(x))&#39; = g(u)&#39;u&#39; = g(u)&#39;f(x)&#39;\)</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Exercise I</h2></hgroup><article  id="exercise-i-1" class="smaller">
+
+<ol class = 'build'>
+<li>\(y = x^3 + \frac{7}{x^4} - \frac{2}{x} + 12\)
+
+<ul class = 'build'>
+<li>\(3x^2 - \frac{28}{x^5} + \frac{2}{x^2}\)</li>
+</ul></li>
+<li>\(y = 5x^3 - 2^x + 3e^x\)
+
+<ul class = 'build'>
+<li>\(15x^2 - 2^xln\ 2 + 3e^x\)</li>
+</ul></li>
+<li>\(y = x^2ln\ x\)
+
+<ul class = 'build'>
+<li>\(x(2ln\ x + 1)\)</li>
+</ul></li>
+<li>\(y = \frac{ln\ x}{x}\)
+
+<ul class = 'build'>
+<li>\(\frac{1 - ln\ x}{x^2}\)</li>
+</ul></li>
+<li>\(y = \frac{e^x}{x^2} + ln\ 3\)
+
+<ul class = 'build'>
+<li>\(\frac{e^x(x - 2)}{x^3}\)</li>
+</ul></li>
+</ol>
+
+</article></slide><slide class=''><hgroup><h2>Exercise II</h2></hgroup><article  id="exercise-ii-1" class="smaller">
+
+<ol class = 'build'>
+<li>\(y = (2x + 5)^4\)
+
+<ul class = 'build'>
+<li>\(8(2x + 5)^3\)</li>
+</ul></li>
+<li>\(y = e ^{-3x^2}\)
+
+<ul class = 'build'>
+<li>\(-6xe^{-3x^2}\)</li>
+</ul></li>
+<li>\(y = ln(1 + x^2)\)
+
+<ul class = 'build'>
+<li>\(\frac{2x}{1 + x^2}\)</li>
+</ul></li>
+<li>\(y = \sqrt{a^2 - x^2}\)
+
+<ul class = 'build'>
+<li>\(-\frac{x}{\sqrt{a^2 - x^2}}\)</li>
+</ul></li>
+<li>\(y = \frac{ln\ x}{x^n}\)
+
+<ul class = 'build'>
+<li>\(\frac{1 - nln\ x}{x^{n + 1}}\)</li>
+</ul></li>
+</ol>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article >
+
+<div class="centered">
+<p><img src=https://d.gr-assets.com/hostedimages/1380222758ra/677711.gif height = "500" /></p></div></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script src="mathcamp_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+<script src="mathcamp_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+<script src="mathcamp_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+<script src="mathcamp_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+<script src="mathcamp_files/ioslides-13.5.1/js/hammer.js"></script>
+<script src="mathcamp_files/ioslides-13.5.1/js/slide-controller.js"></script>
+<script src="mathcamp_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
