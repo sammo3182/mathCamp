@@ -415,8 +415,8 @@ a &lt;- matrix(c(10, 2, 5, 2), ncol = 1)
 b &lt;- matrix(c(4, 15, 6, 8), ncol = 1)
 c &lt;- matrix(c(2, 6, 8), nrow = 1)
 d &lt;- matrix(c(1, 15, 12), nrow = 1)
-e &lt;- matrix(c(14, 17, 17, 11, 10), nrow = 1)
-f &lt;- matrix(c(20, 4, 10, 4), nrow = 1) %&gt;% t</pre>
+e &lt;- matrix(c(14, 17, 17, 11, 10), nrow = 1) %&gt;% t
+f &lt;- matrix(c(20, 4, 10, 4), nrow = 1)</pre>
 
 <pre class = 'prettyprint lang-r'>a + b
 a + c
@@ -452,11 +452,8 @@ c %*% d</pre>
 
 <pre class = 'prettyprint lang-r'>-3 * f</pre>
 
-<pre >##      [,1]
-## [1,]  -60
-## [2,]  -12
-## [3,]  -30
-## [4,]  -12</pre>
+<pre >##      [,1] [,2] [,3] [,4]
+## [1,]  -60  -12  -30  -12</pre>
 
 <pre class = 'prettyprint lang-r'>norm(b, type = &quot;F&quot;)</pre>
 
@@ -601,7 +598,7 @@ solve(B)</pre>
 <li>Let u, v are derivable,
 
 <ul class = 'build'>
-<li>\((u\pm v)&#39; = u&#39; + v&#39;\).</li>
+<li>\((u\pm v)&#39; = u&#39; \pm v&#39;\).</li>
 <li>\((Cu)&#39; = Cu&#39;\), where \(C\) is constant.</li>
 <li>\((uv)&#39; = u&#39;v + uv&#39;\).</li>
 <li>\((\frac{u}{v})&#39; = \frac{u&#39;v - uv&#39;}{v^2},\) where \(v\neq 0.\)</li>

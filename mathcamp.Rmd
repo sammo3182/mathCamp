@@ -230,8 +230,8 @@ a <- matrix(c(10, 2, 5, 2), ncol = 1)
 b <- matrix(c(4, 15, 6, 8), ncol = 1)
 c <- matrix(c(2, 6, 8), nrow = 1)
 d <- matrix(c(1, 15, 12), nrow = 1)
-e <- matrix(c(14, 17, 17, 11, 10), nrow = 1)
-f <- matrix(c(20, 4, 10, 4), nrow = 1) %>% t
+e <- matrix(c(14, 17, 17, 11, 10), nrow = 1) %>% t
+f <- matrix(c(20, 4, 10, 4), nrow = 1)
 ```
 
 ```{r eval=FALSE}
@@ -364,7 +364,7 @@ solve(B)
 * $(a^x)' = a^xln\ a$.
 * $(log_ax)' = \frac{1}{xln\ a}$.
 * Let u, v are derivable, 
-    + $(u\pm v)' = u' + v'$.
+    + $(u\pm v)' = u' \pm v'$.
     + $(Cu)' = Cu'$, where $C$ is constant.
     + $(uv)' = u'v + uv'$.
     + $(\frac{u}{v})' = \frac{u'v - uv'}{v^2},$ where $v\neq 0.$
