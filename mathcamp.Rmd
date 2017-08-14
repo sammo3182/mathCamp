@@ -100,7 +100,7 @@ is <span style="color:yellow">bijective</span>.
 <div class="centered"><img src="image/funProperty.png" height = 500 /></div>
 
 
-## Properities (Continued)
+## Properties (Continued)
 
 * Identity function: $f(x) = x.$
 * Inverse function: 
@@ -112,15 +112,16 @@ f^{-1}(x) =& \frac{x - 3}{2}.
 $$
 
 * $f(f^{-1}(x)) = ?$
-    + x.
+    + $x$.
+    
 * $f^{-1}(f(x)) = ?$
-    + x.
+    + $x$.
 
 
 ## Monotonic Functions
 
 * Increasing vs. Decreasing
-* Strictly increasing vs. striticly decreasing
+* Strictly increasing vs. strictly decreasing
     + "A strictly monotonic function is strictly increasing over its entire domain (Moore & Siegel 2013, 50)." 
     + A function is monotonic if its first derivative does not change sign.
 * Weakly increasing vs. Weakly decreasing
@@ -444,7 +445,7 @@ Row to column, $A^t$.
     + ![](image/det22.gif)
 * Laplace expansion: using minors.
     + ![](image/det33.gif)
-* Mattices with non-zero determinant are **non-singular matrices**, which means invertible.
+* Matrices with non-zero determinant are **non-singular matrices**, which means invertible.
 
 ## Inverse
 * If $AB = BA = I$, then B is the inverse of A, i.e., $B = A^{-1}$. Therefore, 
@@ -605,10 +606,10 @@ solve(B)
 
 # Differentiation
 ## Derivative
-* Mathematic definition
+* Mathematics definition
     + ![](http://i.stack.imgur.com/GfBT4.png)
 
-* what's this in the geomatrics?
+* what's this in the geometric?
     + ![](http://www.maplesoft.com/view.aspx?SI=1577/L6-equationOfTangentLine2.gif)
 
 ----
