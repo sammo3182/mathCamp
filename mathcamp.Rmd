@@ -172,7 +172,7 @@ $$b^n = x.$$
     + e.g., $y = x^2.$
 * Property: x is called the base.
     + Multiplication: m and n are constant.
-        + $x^m + x^n = x^{m + n};$ 
+        + $x^m * x^n = x^{m + n};$ 
         + $x^m * z^m = (xz)^m;$
         + $(x^m)^n = x^{mn}.$
         + $x^0 = 1.$
@@ -275,8 +275,8 @@ funPlot +
 
 ## Answers
 1. $ln(y) = ln(\beta_0 + x_1^{\beta_1} + \beta_2x_2 + \beta_3x_3).$
-1. $ln(y) = 1 + \beta_1ln(x1) + \beta_2ln(x2) + \beta_3ln(x3);$
-1. $ln(y) = 1 + \beta_1ln(x1) + \beta_2ln(x2) - \beta_3ln(x3).$
+1. $ln(y) = ln(\beta_0) + \beta_1ln(x1) + \beta_2ln(x2) + \beta_3ln(x3);$
+1. $ln(y) = ln(\beta_0) + \beta_1ln(x1) + \beta_2ln(x2) - \beta_3ln(x3).$
 
 
 # Call It the Day!
