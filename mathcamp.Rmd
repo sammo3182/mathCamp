@@ -158,7 +158,8 @@ interplot(m = m_cyl, var1 = "cyl", var2 = "wt") +
 
 ## Linear function
 
-$$y = ax + b.$$
+$$y = f(x) = ax + bx^0.$$
+
 * a: slope
 * b: intercept.
 * Properties:
