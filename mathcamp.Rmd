@@ -460,7 +460,7 @@ Row to column, $A^t$.
 ## Properties
 * Matrix
     + Associative: $(AB)C = A(BC)$.
-    + Additive distributive: $(A + B)C = AB + BC$.
+    + Additive distributive: $(A + B)C = AC + BC$.
     + Scalar commutative: $xAB = (xA)B = A(xB) = ABx$
 * Transpose
     + Inverse: $(A^T)^T = A$.
